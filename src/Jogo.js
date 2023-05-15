@@ -57,12 +57,13 @@ export default function Jogo(props) {
     alfabeto.map((letra) => {
       arrBotao.push(
         <Botao
+          key={letra}
           ativo={!palpitesAtuais.includes(letra) && !fimDeJogo}
           letra={letra}
         />
       );
-      setTeclas(arrBotao);
     });
+    setTeclas(arrBotao);
   }
 
 
@@ -121,15 +122,33 @@ export default function Jogo(props) {
     }
   }
 
-  return (
-    <div className="jogo">
-      <img data-test="game-image" src={forca[errosAtuais]} />
-      <button onClick={novoJogo} data-test="choose-word">
-        Escolher Palavra
-      </button>
-      <h1 className={estado}  data-test="word">
-        {palavraUsuarioAtual}
-      </h1>
-    </div>
+//   return (
+//     <div className="jogo">
+//       <img data-test="game-image" src={forca[errosAtuais]} />
+//       <button onClick={novoJogo} data-test="choose-word">
+//         Escolher Palavra
+//       </button>
+//       <h1 className={estado}  data-test="word">
+//         {palavraUsuarioAtual}
+//       </h1>
+//     </div>
+//   );
+// }
+        return (
+        <div className="jogo">
+              <div className="palavra" data-test="word"> 
+                {palavraUsuario.map((letra, index) => (
+                  <span key={index}>{letra}</span>
+                ))}
+              </div>
+              <div className="teclado">{teclas}</div>
+              <div className="status">{estado}</div>
+              <div className="imagem">
+                <img src={forca[erros]} alt="Forca" />
+              </div>
+              <button onClick={() => novoJogo()} className="novo-jogo">
+                Novo Jogo
+              </button>
+            </div>
   );
 }
