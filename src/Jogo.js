@@ -127,9 +127,10 @@ export default function Jogo(props) {
       <button onClick={novoJogo} data-test="choose-word">
         Escolher Palavra
       </button>
-      <h1  data-test="word" className={estado} >
+      <div  data-test="word" >
+      <h1  data-test="word"  className={estado} >
         {palavraUsuarioAtual}
-      </h1>
+      </h1></div>
     </div>
   );
 }
