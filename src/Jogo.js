@@ -30,7 +30,7 @@ export default function Jogo(props) {
   let palavraUsuarioAtual = [...palavraUsuario];
   let acertos = 0;
   let fimDeJogo = false;
-  
+
 
   function Botao(props) {
     if (props.ativo)
@@ -127,7 +127,7 @@ export default function Jogo(props) {
       <button onClick={novoJogo} data-test="choose-word">
         Escolher Palavra
       </button>
-      <h1 data-test="word" className={estado}>
+      <h1 className={estado}  data-test="word">
         {palavraUsuarioAtual}
       </h1>
     </div>
