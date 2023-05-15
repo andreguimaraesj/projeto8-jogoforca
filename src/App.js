@@ -2,6 +2,8 @@ import { useState } from "react";
 import Jogo from "./Jogo";
 import Letras from "./Letras";
 
+
+
 function App() {
   const alfabeto = [
     "a",
@@ -31,6 +33,8 @@ function App() {
     "y",
     "z",
   ];
+
+
   const [palavraSecreta, setPalavraSecreta] = useState("");
   const [palavraUsuario, setPalavraUsuario] = useState([]);
   const [palpites, setPalpites] = useState([]);
@@ -41,7 +45,11 @@ function App() {
       </button>
     ))
   );
+
+
   const [erros, setErros] = useState(0);
+
+
 
   return (
     <div className="container">
@@ -62,5 +70,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

@@ -23,4 +23,6 @@ const palavras = [
     "xerife", "xadrez", "xarope", "xereta",
 ]
 
+
+
 export default palavras
