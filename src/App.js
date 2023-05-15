@@ -3,7 +3,6 @@ import Jogo from "./Jogo";
 import Letras from "./Letras";
 
 
-
 function App() {
   const alfabeto = [
     "a",
